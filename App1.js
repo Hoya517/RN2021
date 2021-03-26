@@ -30,38 +30,30 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
+      year: 2018,
       leapYear: true,
+      topics: ['React', 'React Native', 'JavaScript'],
       info: {
+        paperback: true,
+        length: '335 pages',
         type: 'programming'
       }
     }
   }
   render() {
+    let leapyear = <Text>This is not a leapyear!</Text>
+    if (this.state.leapYear) {
+      leapyear = <Text>This is a leapyear</Text>
+    }
     return(
-      <BookDisplay
-        leapYear={ this.state.leapYear }
-        info={ this.state.info }
-        topics={['React', 'React Native', 'JavaScript']} />
+      <View>
+        <Text>{ this.state.year }</Text>
+        <Text>Length: { this.state.info.length }</Text>
+        <Text>Type: { this.state.info.type }</Text>
+        { leapyear }
+      </View>
     )
   }
-}
-const BookDisplay = (props) => {
-  let leapyear
-  let { topics } = props
-  const { info } = props
-  topics = topics.map((topic, i) => {
-    return <Text>{ topic }</Text>
-  })
-  if (props.leapYear) {
-    leapyear = <Text>This is a leapyear!</Text>
-  }
-  return (
-    <View>
-      { leapyear }
-      <Text>Book type: { info.type }</Text>
-      { topics }
-    </View>
-  )
 }
 
 export default App;
