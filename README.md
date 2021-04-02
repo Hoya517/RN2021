@@ -1,4 +1,15 @@
 "# RN2021" 
+# 4월 2일
+> 리액트 이해하기
+>> 1. 리액트 컴포넌트 스펙
+>>> render 메서드로 UI 만들기
+>>> 속성 초기화와 생성자 사용하기
+>> 2. 리액트 생명주기 메서드
+>>> static getDerivedStateFromProps 메서드
+>>> componentDidMount 생명주기 메서드
+>>> shouldComponentUpdate 생명주기 메서드
+>>> componentDidUpdate 생명주기 메서드
+>>> componentWillUnmount 생명주기 메서드
 
 # 3월 26일
 > 리액트 이해하기
