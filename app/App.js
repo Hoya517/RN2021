@@ -2,6 +2,14 @@ import React, {Component} from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native'
 
 class App extends Component {
+    constructor() {
+        super()
+        this.state = {
+            inputValue: '',
+            todos: [],
+            type: 'All'
+        }
+    }
     render() {
         return (
             <View style={StyleSheet.container}>
