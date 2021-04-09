@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native'
 import Heading from './Heading'
 import Input from './Input'
+import Button from './Button'
 
 let todoIndex = 0
 
@@ -13,6 +14,7 @@ class App extends Component {
             todos: [],
             type: 'All'
         }
+        this.submitTodo = this.submitTodo.bind(this)
     }
     
     inputChange(inputValue) {
@@ -36,9 +38,7 @@ class App extends Component {
         })
     }
     render() {
-
-        const { inputValue } = this.state
-
+        let { inputValue } = this.state
         return (
             <View style={StyleSheet.container}>
                 <ScrollView 
@@ -48,6 +48,7 @@ class App extends Component {
                     <Input
                         inputValue={inputValue}
                         inputChange={(text) => this.inputChange(text)} />
+                    <Button submitTodo={this.submitTodo} />
                 </ScrollView>
             </View>
         )
