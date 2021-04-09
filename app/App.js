@@ -17,6 +17,22 @@ class App extends Component {
         console.log(' Input Value: ', inputValue)
         this.setState({ inputValue })
     }
+
+    submitTodo() {
+        if (this.state.inputValue.match(/^\s*$/)) {
+            return
+        }
+        const todo = {
+            title: this.state.inputValue,
+            todoIndex,
+            complete: false
+        }
+        todoIndex++
+        const todos = [...this.state.todos, todo]
+        this.setState({ todos, inputValue: '' }, () => {
+            console.log('State: ', this.state)
+        })
+    }
     render() {
 
         const { inputValue } = this.state
