@@ -1,12 +1,14 @@
 import React from 'react'
 import { View, TextInput, StyleSheet} from 'react-native'
-const Input = () => (
-    <View style={StyleSheet.inputContainer}>
+const Input = ({ inputValue, inputChange }) => (
+    <View style={styles.inputContainer}>
         <TextInput
-            style={StyleSheet.input}
+            value = {inputValue}
+            style={styles.input}
             placeholder='What needs to be done?'
             placeholderTextColor='#CACACA'
-            selectionColor='#666666' />
+            selectionColor='#666666'
+            onChangeText={inputChange} />
     </View>
 )
 const styles = StyleSheet.create({
@@ -25,4 +27,4 @@ const styles = StyleSheet.create({
         paddingRight: 10
     }
 })
-exprot default Input
+export default Input
