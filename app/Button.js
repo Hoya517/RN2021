@@ -2,19 +2,19 @@ import React from 'react'
 import { View, Text, StyleSheet, TouchableHighlight } from 'react-native'
 
 const Button = ({ submitTodo }) => (
-    <View style={StyleSheet.buttonContainer}>
+    <View style={styles.buttonContainer}>
         <TouchableHighlight
             underlayColor="#efefef"
-            style={StyleSheet.button}
+            style={styles.button}
             onPress={submitTodo}>
-            <Text style={StyleSheet.submit}>
+            <Text style={styles.submit}>
                 Submit
             </Text>
             </TouchableHighlight>
     </View>
 )
 
-const styiles = StyleSheet.create({
+const styles = StyleSheet.create({
     buttonContainer: {
         alignItems: 'flex-end'
     },
