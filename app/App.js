@@ -16,6 +16,8 @@ class App extends Component {
             type: 'All'
         }
         this.submitTodo = this.submitTodo.bind(this)
+        this.toggleComplete = this.toggleComplete.bind(this)
+        this.deleteTodo = this.deleteTodo.bind(this)
     }
     
     inputChange(inputValue) {
@@ -38,6 +40,23 @@ class App extends Component {
             console.log('State: ', this.state)
         })
     }
+
+    deleteTodo (todoIndex) {
+        let { todos } = this.state
+        todos = todos.filter((todo) => todo.todoIndex !== todoIndex)
+        this.setState({ todos })
+    }
+
+    toggleComplete (todoIndex) {
+        let todos = this.state.todos
+        todos.forEach((todo) => {
+            if (todo.todoIndex === todoIndex) {
+                todo.complete = !todo.complete
+            }
+        })
+        this.setState({ todos })
+    }
+
     render() {
         const { inputValue, todos } = this.state
         return (
