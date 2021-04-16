@@ -68,7 +68,10 @@ class App extends Component {
                     <Input
                         inputValue={inputValue}
                         inputChange={(text) => this.inputChange(text)} />
-                    <TodoList todos={todos} />
+                    <TodoList 
+                        toggleComplete={this.toggleComplete}
+                        deleteTodo={this.deleteTodo}
+                        todos={todos} />
                     <Button submitTodo={this.submitTodo} />
                 </ScrollView>
             </View>
