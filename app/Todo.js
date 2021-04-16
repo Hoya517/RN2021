@@ -1,8 +1,8 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 const Todo = ({ todo }) => (
-    <View style={StyleSheet.todoContainer}>
-        <Text style={StyleSheet.todoText}>
+    <View style={styles.todoContainer}>
+        <Text style={styles.todoText}>
             {todo.title}
         </Text>
     </View>
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         paddingBottom: 7,
         shadowOpacity: 0.2,
         shadowRadius: 3,
-        shadowColor: '#000000'
+        shadowColor: '#000000',
         shadowOffset: { width: 2, height: 2 },
         flexDirection: 'row',
         alignItems: 'center'
