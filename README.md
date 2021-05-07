@@ -1,7 +1,94 @@
 "# RN2021"
 
+
+# 5월 7일
+## 구조 분해 할당
+: 리액트에서 "this.state."의 중복을 피할 수 있다
+모질라 - 구조 분해 할당(https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+```javascript
+var o = {id: 201740206, name: "김주호"};
+var {id, name} = o;
+
+console.log(id); // 201740206
+console.log(name); // 김주호
+```
+
+### ex4.5 ~ ex4.6 => 컴포넌트로 변환
+- App.js -> MyComponent.js 파일 복사 및 이름 변경
+- styles.js -> MyComponentStyles.js 파일 복사 및 이름 변경
+- MyComponent.js 임포트 수정
+```javascript
+// import getStyleSheet from './styles'
+import getStyleSheet from './MyComponentStyles'  // 수정
+
+// export default class App extends Component {
+export default class MyComponent extends Component {  // 수정
+```
+
+- index.js 임포트 수정
+```javascript
+// import App from './app/App';
+import MyComponent from './app/MyComponent';  // ./MyComponent로 수정
+
+// AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => MyComponent);  // MyComponent로 수정
+```
+
+### Profile Card 컴포넌트를 위한 초기 형태
+```javascript
+flex: 1  // 디바이스 전체를 할당
+```
+
+### border 속성 지정하기
+- Margin | Border | Padding | Component
+- Top -> Right -> Bottom -> Left
+
+
 # 4월 30일
 ## 4장 스타일링 소개
+### 컴포넌트의 스타일시트를 외부로 분리하기
+```javascript
+// 1. StyleSheet 임포트
+import { StyleSheet } from 'react-native'
+
+// 2. 상수에 스타일 생성
+const styles = StyleSheet.create({
+    container: {
+        ...
+    }
+})
+
+const buttons = StyleSheet.create({
+    primary: {
+        ...
+    }
+})
+
+// 3. export해서 외부에서 사용할 수 있도록 함.
+export { styles, buttons }
+```
+
+### 외부 스타일시트 가져오기
+```javascript
+// 1. styles.js 임포트
+...
+import {styles, buttons} from './styles'
+
+export default class App extends Component {
+    render() {
+        return (
+            // 2. 
+            // styles.js 파일에 정의된 styles.container 스타일 참조
+            // styles.js 파일에 정의된 buttons.primary 스타일 참조
+            <View style={styles.container}> 
+                <TouchableHighlight style = {buttons.primary}>
+                    <Text>Sample Text</Text>
+                </TouchableHighlight>
+            </View>
+        )
+    }
+}
+```
 
 ### 스타일과 코드
 ```javascript
@@ -48,52 +135,6 @@ export default class App extends Component {
     }
 }
 ```
-
-### 컴포넌트의 스타일시트를 외부로 분리하기
-```javascript
-// 1. StyleSheet 임포트
-import { StyleSheet } from 'react-native'
-
-// 2. 상수에 스타일 생성
-const styles = StyleSheet.create({
-    container: {
-        ...
-    }
-})
-
-const buttons = StyleSheet.create({
-    primary: {
-        ...
-    }
-})
-
-// 3. export해서 외부에서 사용할 수 있도록 함.
-export { styles, buttons }
-```
-
-### 외부 스타일시트 가져오기
-```javascript
-// 1. styles.js 임포트
-...
-import {styles, buttons} from './styles'
-
-export default class App extends Component {
-    render() {
-        return (
-            // 2. 
-            // styles.js 파일에 정의된 styles.container 스타일 참조
-            // styles.js 파일에 정의된 buttons.primary 스타일 참조
-            <View style={styles.container}> 
-                <TouchableHighlight style = {buttons.primary}>
-                    <Text>Sample Text</Text>
-                </TouchableHighlight>
-            </View>
-        )
-    }
-}
-```
-
-### 스타일과 코드
 
 
 # 4월 16일
