@@ -4,8 +4,8 @@
 
 import React from 'react'  //추가
 import {AppRegistry} from 'react-native';
-import App from './app/App';  // ./App 에서 수정
+import MyComponent from './app/MyComponent';  // ./MyComponent로 수정
 import {name as appName} from './app.json';
-const TodoApp = () => <App />  // 추가
+// const TodoApp = () => <App />  // 추가
 
-AppRegistry.registerComponent(appName, () => App);  // 수정
+AppRegistry.registerComponent(appName, () => MyComponent);  // MyComponent로 수정
