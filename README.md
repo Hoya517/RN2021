@@ -1,5 +1,39 @@
 "# RN2021"
 
+# 5월 14일
+## border 속성 지정하기
+### color, width, style 속성으로 테두리 만들기
+- borderWidth: 1 => 1px(px 단위 생략)
+- Example 컴포넌트
+    - 재사용 가능
+    - 기본 스타일 속성을 전달된 스타일 속성으로 쉽게 오버라이드 할 수 있음.
+
+### borderRadius를 이용해서 모양 만들기
+- TopRight -> BottomRight -> BottomLeft -> TopLeft
+
+### 프로필 카드 컴포넌트에 테두리 추가하기
+- 이미지 파일은 앱의 코드와 같은 디렉토리에 위치함.('./user.png')
+
+
+## 마진(margin)과 패딩(padding) 지정하기
+### margin 속성 이용하기
+- 음수 마진이 적용될 때
+    - android & ios: 밀려나간 상태로 보임
+
+### padding 속성 이용하기
+- 음수 마진이 적용될 때
+    - android: 밀려나간 부분이 잘려 보임
+    - ios: 밀려나간 상태로 보임
+
+## Position을 이용해서 컴포넌트 배치하기
+- Yoga
+    - 오픈 소스인 크로스 플랫폼 레이아웃 라이브러리
+    - flexbox 관련
+
+## 프로필 카드의 위치 지정하기
+- 원 위: marginTop: 30
+- 원과 아이콘 사이: paddingTop: 15
+
 
 # 5월 7일
 ## 구조 분해 할당
