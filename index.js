@@ -2,10 +2,10 @@
  * @format
  */
 
-import React from 'react'  //추가
-import {AppRegistry} from 'react-native';
+import React from 'react'  // default
+import {AppRegistry} from 'react-native';  // default
 import App from './app/App';  // ./App으로 수정
-import {name as appName} from './app.json';
-// const TodoApp = () => <App />  // 추가
+import {name as ch4App2} from './app.json';
+const MyComponentTest = () => <App />
 
-AppRegistry.registerComponent(appName, () => App);  // App으로 수정
+AppRegistry.registerComponent(ch4App2, () => App);  // App으로 수정

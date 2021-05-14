@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 
-class App extends Component {
+export default class App extends Component {
     render() {
         return (
 
             <View style={styles.container}>
-                <Example style={{borderWidth: 1}}>
-                    <Text>borderWidth: 1</Text>
-                </Example>
-                <Example style={{borderWidth:3}}
                 <View style={styles.cardContainer} />
             </View>
         )
@@ -31,5 +27,3 @@ const styles = StyleSheet.create({
         height: 400
     }
 })
-
-export default App
