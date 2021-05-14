@@ -76,7 +76,7 @@ flex: 1  // 디바이스 전체를 할당
 - Margin | Border | Padding | Component
 - Top -> Right -> Bottom -> Left
 
-
+------
 # 4월 30일
 ## 4장 스타일링 소개
 ### 컴포넌트의 스타일시트를 외부로 분리하기
