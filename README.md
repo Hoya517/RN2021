@@ -35,9 +35,6 @@
 - 원 위: marginTop: 30
 - 원과 아이콘 사이: paddingTop: 15
 
-=======
->>>>>>> eafa302e1bfbf6dc4a7e0dae3df0a6f7d4240ed2
-
 # 5월 7일
 ## 구조 분해 할당
 : 리액트에서 "this.state."의 중복을 피할 수 있다
