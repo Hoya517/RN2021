@@ -26,6 +26,7 @@
     - ios: 밀려나간 상태로 보임
 
 ## Position을 이용해서 컴포넌트 배치하기
+<<<<<<< HEAD
 - Yoga
     - 오픈 소스인 크로스 플랫폼 레이아웃 라이브러리
     - flexbox 관련
@@ -34,6 +35,8 @@
 - 원 위: marginTop: 30
 - 원과 아이콘 사이: paddingTop: 15
 
+=======
+>>>>>>> eafa302e1bfbf6dc4a7e0dae3df0a6f7d4240ed2
 
 # 5월 7일
 ## 구조 분해 할당
