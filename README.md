@@ -23,7 +23,7 @@
 	- textShadowColor: 색상
 	- textShadowOffset: 오프셋
 	- textShadowRadius: 반경
-
+------
 # 고급 스타일링 기법
 ## 플랫폼별 크기와 스타일
 ### shadowPropTypesIOS와 elevation 속성으로 음영 넣기
@@ -38,6 +38,7 @@
 - 리액트 네이티브 프레임워크에는 내비게이션 라이브러리가 포함되어 있지 않음.
 - React Native Navigation은 Wix의 개발자들이 개발하고 관리하는 오픈소스 라이브러리
 
+------
 
 # 5월 14일
 ## border 속성 지정하기
