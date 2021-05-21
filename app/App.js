@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, Image, View, Text } from 'react-native'
+import { StyleSheet, Image, View, Text, Platform } from 'react-native'
 
 class App extends Component {
   render() {
@@ -36,53 +36,66 @@ class App extends Component {
 const profileCardColor = 'dodgerblue';
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    cardContainer: {
-      alignItems: 'center',    
-      borderColor: 'black',
-      borderWidth: 3,
-      borderStyle: 'solid',
-      borderRadius: 20,
-      backgroundColor: profileCardColor,
-      width: 300,
-      height: 400
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  cardContainer: {
+    alignItems: 'center',    
+    borderColor: 'black',
+    borderWidth: 3,
+    borderStyle: 'solid',
+    borderRadius: 20,
+    backgroundColor: profileCardColor,
+    width: 300,
+    height: 400
   },
   cardImageContainer: {
-      alignItems: 'center',    
-      backgroundColor: 'white',
-      borderWidth: 3,
-      borderColor: 'black',
-      width: 120,
-      height: 120,
-      borderRadius: 60,
-      marginTop: 30,    
-      paddingTop: 15    
+    alignItems: 'center',    
+    backgroundColor: 'white',
+    borderWidth: 3,
+    borderColor: 'black',
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    marginTop: 30,    
+    paddingTop: 15    
   },
-    cardImage: {        
-      width: 80,
-      height: 80
+  cardImage: {        
+    width: 80,
+    height: 80
   },
   cardName: {    
-      color: 'white',
-      marginTop: 30,
+    color: 'white',
+    marginTop: 30,
+    ...Platform.select({
+      ios: {
+        fontFamily: 'American Typewriter',
+      },
+      android: {
+        fontFamily: 'monospace',
+        fontStyle: 'italic',
+        color: 'red',
+      },
+    }),
+    fontSize: 24,
+    fontFamily: 'bold',
+    color: 'white',
   },
   cardOccupationContainer: {    
-      borderColor: 'black',
-      borderBottomWidth: 3
+    borderColor: 'black',
+    borderBottomWidth: 3
   },
   cardOccupation: {    
-      marginTop: 10,
-      marginBottom: 10,
+    marginTop: 10,
+    marginBottom: 10,
   },
   cardDescription: {    
-      marginTop: 10,
-      marginRight: 40,
-      marginLeft: 40,
-      marginBottom: 10
+    marginTop: 10,
+    marginRight: 40,
+    marginLeft: 40,
+    marginBottom: 10
   }
 });
 
