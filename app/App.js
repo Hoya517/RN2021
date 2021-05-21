@@ -71,6 +71,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',    
     fontSize: 24,    
     marginTop: 30,
+    textShadowColor: 'black',
+    textShadowOffset: {
+      height: 2,
+      width: 2
+    },
+    textShadowRadius: 3
   },  
   cardOccupationContainer: {    
     borderColor: 'black',
