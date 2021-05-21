@@ -66,36 +66,27 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80
   },
-  cardName: {    
-    color: 'white',
+  cardName: {
+    color:  'white',
+    fontWeight: 'bold',    
+    fontSize: 24,    
     marginTop: 30,
-    ...Platform.select({
-      ios: {
-        fontFamily: 'American Typewriter',
-      },
-      android: {
-        fontFamily: 'monospace',
-        fontStyle: 'italic',
-        color: 'red',
-      },
-    }),
-    fontSize: 24,
-    fontFamily: 'bold',
-    color: 'white',
-  },
+  },  
   cardOccupationContainer: {    
     borderColor: 'black',
     borderBottomWidth: 3
   },
-  cardOccupation: {    
+  cardOccupation: {
+    fontWeight: 'bold',    
     marginTop: 10,
     marginBottom: 10,
   },
-  cardDescription: {    
-    marginTop: 10,
-    marginRight: 40,
-    marginLeft: 40,
-    marginBottom: 10
+  cardDescription: {
+      fontStyle: 'italic',    
+      marginTop: 10,
+      marginRight: 40,
+      marginLeft: 40,
+      marginBottom: 10
   }
 });
 
