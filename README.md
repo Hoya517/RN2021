@@ -1,5 +1,44 @@
 "# RN2021"
 
+# 5월 21일
+## Text 컴포넌트에 스타일 적용하기
+### Text 컴포넌트 vs View 컴포넌트
+- View에서 사용되는 대부분 스타일을 Text에서도 사용할 수 있음. (flex 속성 제외)
+- 하지만, 반대로 Text에서 사용하는 스타일을 View에서도 사용할 수는 없음.
+
+### 폰트 스타일
+- fontFamily: CSS와 다르게 fontFamily 속성에 여러 개의 폰트를 지정할 수 없음.
+	- 모노스페이스 폰트는 iOS에서 지원X => Platform.select를 이용해서 fontFamily 속성을 지정(iOS와 android를 따로 지정)
+	- 지원하지 않는 폰트 확인 필요
+- fontSize: 기본 값은 14(px단위생략)
+- fontStyle: normal, italic 두 개만 사용가능
+- fontWeight: 기본 값은 normal 또는 400
+
+### 텍스트 장식하기
+- 밑줄 또는 취소선 추가하기
+	- textDecorationLine속성
+	- 'none'(기본값), 'underline', 'linethrough', 'underline line-through'
+	- android, iOS의 취소선 ui 다름
+- 텍스트에 음영(그림자) 넣기
+	- textShadowColor: 색상
+	- textShadowOffset: 오프셋
+	- textShadowRadius: 반경
+
+# 고급 스타일링 기법
+## 플랫폼별 크기와 스타일
+### shadowPropTypesIOS와 elevation 속성으로 음영 넣기
+- Platform.select 이용
+	- shadowPropTypesIOS 속성으로 iOS에서 음영 효과 넣기
+	- elevation 속성으로 안드로이드에 유사한 음영 효과 넣기
+
+## 컴포넌트를 이동, 회전, 크기 변경, 기울이기
+## flexbox를 이용해서 컴포넌트 배치하기
+
+# 내비게이션
+- 리액트 네이티브 프레임워크에는 내비게이션 라이브러리가 포함되어 있지 않음.
+- React Native Navigation은 Wix의 개발자들이 개발하고 관리하는 오픈소스 라이브러리
+
+
 # 5월 14일
 ## border 속성 지정하기
 ### color, width, style 속성으로 테두리 만들기
