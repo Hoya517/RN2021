@@ -49,7 +49,19 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: profileCardColor,
     width: 300,
-    height: 400
+    height: 400,
+    ...Platform.select({
+      ios: {
+        shadowColor: 'black',
+        shadowOffset: {
+          height: 10
+        },
+        shadowOpacity: 1
+      },
+      android: {
+        elevation: 15
+      }
+    })
   },
   cardImageContainer: {
     alignItems: 'center',    
@@ -60,7 +72,21 @@ const styles = StyleSheet.create({
     height: 120,
     borderRadius: 60,
     marginTop: 30,    
-    paddingTop: 15    
+    paddingTop: 15,
+    ...Platform.select({
+      ios: {
+        shadowColor: 'black',
+        shadowOffset: {
+          height: 10,
+        },
+        shadowOpacity: 1
+      },
+      android: {
+        borderWidth: 3,
+        borderColor: 'black',
+        elevation: 15
+      }
+    })    
   },
   cardImage: {        
     width: 80,
