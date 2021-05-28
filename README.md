@@ -1,5 +1,12 @@
 "# RN2021"
 
+# 5월 28일
+## navigation
+https://github.com/Hoya517/React-Native-Navigation
+------
+## expo-cli
+https://github.com/Hoya517/React-Native-Expo-cli
+------
 # 5월 21일
 ## Text 컴포넌트에 스타일 적용하기
 ### Text 컴포넌트 vs View 컴포넌트
